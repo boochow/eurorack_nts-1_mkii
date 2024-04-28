@@ -92,12 +92,16 @@ public:
 #ifdef LILYNZ
         p_[Shape] = 41;
 #endif
+        osc_.set_shape(static_cast<braids::MacroOscillatorShape>(p_[Shape]));
+
         p_[Resolution] = 6;
         p_[SampleRate] = 5;
         lfoz_ = 0;
         lfo_timbre_ = 1;
         lfo_color_ = 0;
         lfo_fm_amount_ = 0;
+
+        started_ = false;
 
         return k_unit_err_none;
     }
@@ -113,6 +117,8 @@ public:
     inline void Suspend() {}
 
     fast_inline void Process(const float * in, float * out, size_t frames) {
+        // This started_ flag is for avoiding the firmware bug
+        started_ = true;
         const float * __restrict in_p = in;
         float * __restrict out_p = out;
         const unit_runtime_osc_context_t *ctxt = static_cast<const unit_runtime_osc_context_t *>(runtime_desc_.hooks.runtime_context);
@@ -178,6 +184,10 @@ public:
     }
 
     inline void setParameter(uint8_t index, int32_t value) {
+        // This if statement is for avoiding the firmware bug
+        if (!started_) { 
+            return;
+        }
         switch(index) {
         case Shape:
             CONSTRAIN(value, 0, 47);
@@ -370,9 +380,8 @@ public:
     }
 
 private:
-    std::atomic_uint_fast32_t flags_;
-
     int32_t p_[PARAMCOUNT];
+    bool started_;
 
     unit_runtime_desc_t runtime_desc_;
 
