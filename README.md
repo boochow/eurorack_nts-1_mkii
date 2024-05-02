@@ -15,7 +15,7 @@ Due to a file size limitation of 48Kb for the NTS-1 mkII oscillator module, the 
 - WT
   Wavetable sysnthesis.
 
-- Nz
+- NZ
   Noise generators.
 
 ## Features
