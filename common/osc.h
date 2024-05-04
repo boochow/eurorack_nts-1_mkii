@@ -14,8 +14,6 @@
 
 #include <algorithm>
 
-#include <arm_neon.h>
-
 #include "unit_osc.h"   // Note: Include base definitions for osc units
 
 #include "stmlib/utils/dsp.h"
