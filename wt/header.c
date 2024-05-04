@@ -17,7 +17,7 @@ const __unit_header unit_header_t unit_header = {
     .dev_id = 0x42636877U,  // "Bchw"
     .unit_id = 0x0A010000,  // Product number(01),Unit type(01=OSC),reserved
     .version = 0x00010000U,
-    .name = "LiWt",
+    .name = "LiWT",
     .num_params = 9,
     .params = {
         // Format: min, max, center, default, type, fractional, frac. type, <reserved>, name
