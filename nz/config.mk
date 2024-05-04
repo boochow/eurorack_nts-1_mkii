@@ -2,7 +2,7 @@
 # Project Configuration
 #
 
-PROJECT := lily-05
+PROJECT := lily-nz
 PROJECT_TYPE := osc
 
 ##############################################################################

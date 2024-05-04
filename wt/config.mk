@@ -2,7 +2,7 @@
 # Project Configuration
 #
 
-PROJECT := lily-04
+PROJECT := lily-wt
 PROJECT_TYPE := osc
 
 ##############################################################################

@@ -2,7 +2,7 @@
 # Project Configuration
 #
 
-PROJECT := lily-03
+PROJECT := lily-rs
 PROJECT_TYPE := osc
 
 ##############################################################################

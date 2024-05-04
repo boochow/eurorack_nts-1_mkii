@@ -2,7 +2,7 @@
 # Project Configuration
 #
 
-PROJECT := lily-01
+PROJECT := lily-va
 PROJECT_TYPE := osc
 
 ##############################################################################

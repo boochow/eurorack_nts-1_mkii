@@ -2,7 +2,7 @@
 # Project Configuration
 #
 
-PROJECT := lily-02
+PROJECT := lily-fm
 PROJECT_TYPE := osc
 
 ##############################################################################
