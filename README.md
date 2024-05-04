@@ -3,19 +3,19 @@ This is the NTS-1 mkII port of Braids, the Mutable Instrument's macro oscillator
 
 Due to a file size limitation of 48Kb for the NTS-1 mkII oscillator module, the ocillators are divided into five different files:
 
-- VA
+- **VA**:
   Analog oscillators, including a ring modulator and saw swarm.
 
-- FM
+- **FM**:
   Includes Waveshaping, voice/formant synthesis, additive synthesis, and FM synthesis.
 
-- RS
+- **RS**:
   Resonator-based synthesis, featureing pluck, string, wind, bell, and percussion sounds.
 
-- WT
+- **WT**:
   Wavetable sysnthesis.
 
-- NZ
+- **NZ**:
   Noise generators.
 
 ## Features
